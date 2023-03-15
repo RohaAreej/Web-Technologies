@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  background: #778899;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+.container
+{
+position: relative;
+width: 100%;
+max-width: 1000px;
+background: #e5e9e8;
+margin: 50px;
+box-shadow: 0 50px 75px rgb(0,0,0,0.1);
+border-left: 50px solid #e5e9e8;
+border-right: 50px solid #e5e9e8;
+}
+
+.container .left_side{
+position:relative;
+padding: 1px;
+}
+.container .top
+{
+position: relative;
+display: grid;
+grid-template-columns: 1fr 2fr ;
+padding: 40px;
+padding-bottom: 0;
+background: #e5e9e8;
+
+}
+
+.container .top .imgBx
+{
+position: relative;
+width: 100%;
+display: flex;
+align-items: center;
+
+
+}
+.container .top .imgBx .box
+{
+position: relative;
+width: 70%;
+min-width: 200px;
+border-radius: 10%;
+overflow: hidden;
+aspect-ratio: 1;
+
+}
+.container .top .imgBx .box img 
+{
+position: absolute;
+top: 1px;
+left: 50px;;
+bottom: 100px;
+width: 90%;
+height: 120%;
+border: 5px solid #151313;
+border-radius: 10%;
+object-fit: cover;
+}
+.container .top .profileText
+{
+position: relative;
+padding: 50px;
+font-size: 18px;
+display:flex ;
+align-items: center;
+
+}
+.container .top .profileText h3
+{
+font-size: 3em;
+line-height: 1.2em;
+font-weight: 300;
+color: #2f1c1c;
+}
+.container .top .profileText h3 span 
+{
+position: relative;
+font-size: 0.5em;
+font-weight: 300;
+top : -10px 
+}
+.container .contentBox
+{
+position: relative;
+min-height: 500px;
+display: grid;
+grid-template-columns: 1fr 2fr ;
+padding: 0 40px 40px ;
+}
+.container .contentBox h3
+{
+border-left: 4px solid #132ecb;
+padding-left: 10px;
+line-height: 1em;
+font-weight: 600;
+color:#333;
+letter-spacing: 0.1em;
+margin-bottom: 20px;
+margin-top: 50px;
+}
+.container .contentBox ul
+{
+position: relative;
+margin: 10px 0;
+}
+.container .contentBox ul li 
+{
+list-style: none;
+margin: 25px 0;
+line-height: 1em;
+color:#333;
+cursor: pointer;
+display: flex;
+}
+.container .contentBox ul li ion-icon{
+
+font-size: 1.2em;
+margin-right: 10px;
+color: rgb(112, 47, 10);
+
+}
+.container .contentBox ul.education li 
+{
+flex-direction: column;
+margin: 30px;
+}
+h5{
+color: rgb(112, 47, 10);
+}
+
+h4{
+color: black;
+font-weight: 500;
+margin : 5px 0;
+}
+
+h6{
+color:#666;
+font-weight: 300;
+font-size: 1em;
+}
+
+.language li
+{
+flex-direction: column;
+}
+
+.language li span{
+color:#5c4141;
+font-size: 16px;
+font-weight: 500;
+}
+
+.language .percentage
+
+{
+position: relative;
+width:100%;
+background: #e3e3e3;
+height:6px;
+margin-top:15%;
+margin-bottom:10%;
+display:block;
+overflow:hidden;
+}
+
+.language .percentage div
+{
+position: absolute;
+top:0;
+left:0;
+height: 100%;
+background: #d23a35;
+}
+
+.container .contentBox ul.interest 
+{
+position: relative;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.rightside
+{
+padding-left: 50px;
+}
+.about .box
+{
+display:flex;
+flex-direction: row;
+margin: 20px 0;
+}
+
+.about .box .year_company
+{
+min-width: 150px;
+margin-bottom: 10px;
+}
+
+.about .box .text h4{
+color: rgb(112, 47, 10);
+font-size: 18px;
+margin: 0;
+}
+
+.about .box .duration
+{
+min-width: 180px;
+margin-bottom: 10px;
+}
