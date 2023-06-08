@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Records</title>
+</head>
+
+<body>
+  <h1>Student Records</h1>
+  <button onclick="fetchStudents()">Fetch Students</button>
+  <ul id="students-list"></ul>
+
+  <script>
+    function fetchStudents() {
+      fetch('http://localhost:5000/students')
+        .then(response => response.json())
+        .then(students => {
+          const studentsList = document.getElementById('students-list');
+          studentsList.innerHTML = '';
+
+          students.forEach(student => {
+            const li = document.createElement('li');
+            li.textContent = `Name: ${student.name}, CGPA: ${student.cgpa}, Skills: ${student.skills}, Address: ${student.address}`;
+            studentsList.appendChild(li);
+          });
+        })
+        .catch(error => console.error(error));
+    }
+  </script>
+</body>
+
+</html>
