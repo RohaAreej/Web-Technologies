@@ -1,0 +1,225 @@
+  
+  
+
+      <!-- Home -->
+
+  <section class="home" id="home">
+
+      <div class="content">
+          <h3>Discover the <br> taste of real <br> coffee </h3>
+          <a href="#" class="btn">Order Now</a>
+      </div>
+
+  </section>
+
+      <!-- home -->
+
+      <!-- About us -->
+
+  <h1 class="heading">about us</h1>
+  
+  <section class="about" id="about">
+
+      <div class="row">
+
+          <div class="image">
+              <img src="images/about.jpg" alt="about">
+          </div>
+
+          <div class="content">
+              <h3>What makes our coffee special?</h3>
+              <div class="line"></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, debitis alias veritatis exercitationem quo, laudantium dolorem quas nesciunt ipsam provident corporis, tenetur facere rerum dolor non? Fugiat eius maxime aperiam!</p>
+          </div>
+
+      </div>
+
+  </section>
+
+<!-- end -->
+
+  <!-- Menu -->
+
+  <!-- <section class="menu" id="menu">
+
+      <h1 class="heading">menu</h1>
+
+      <div class="box-container">
+
+          <div class="box">
+              <img src="images/menu-1.png" alt="">
+              <h3>Classic Cofffee Espresso</h3>
+              <div class="price">$10</div>
+              <button class="btn add-to-cart">Add to Cart</button>
+
+          </div>
+
+          <div class="box">
+              <img src="images/menu-1.png" alt="">
+              <h3>Classic Cofffee Espresso</h3>
+              <div class="price">$10</div>
+              <button class="btn add-to-cart">Add to Cart</button>
+
+          </div>
+
+          <div class="box">
+              <img src="images/menu-1.png" alt="">
+              <h3>Classic Cofffee Espresso</h3>
+              <div class="price">$10</div>
+              <button class="btn add-to-cart">Add to Cart</button>
+
+          </div>
+
+          <div class="box">
+              <img src="images/menu-1.png" alt="">
+              <h3>Classic Cofffee Espresso</h3>
+              <div class="price">$10</div>
+              <button class="btn add-to-cart">Add to Cart</button>
+
+          </div>
+
+          <div class="box">
+              <img src="images/menu-1.png" alt="">
+              <h3>Classic Cofffee Espresso</h3>
+              <div class="price">$10</div>
+              <button class="btn add-to-cart">Add to Cart</button>
+
+          </div>
+
+          <div class="box">
+              <img src="images/menu-1.png" alt="">
+              <h3>Classic Cofffee Espresso</h3>
+              <div class="price">$10</div>
+              <button class="btn add-to-cart">Add to Cart</button>
+
+          </div>
+
+      </div>
+
+  </section> -->
+  
+  <section class="menu" id="menu">
+
+    <h1 class="heading">menu</h1>
+  
+    <a href="/add" class="btn" style="align-items: center; margin:20px">Add menu</a>
+
+    <div class="box-container">
+  
+      <% menu.forEach(function(item) { %>
+        <div class="box">
+            <img src="<%= item.image %>" alt="">
+            <h3><%= item.name %></h3>
+            <div class="price"><%= item.price %></div>
+            <!-- <button class="btn add-to-cart">Add to Cart</button>
+            <button class="btn edit">Edit</button>
+            <button class="btn delete">Delete</button> -->
+            <a href="/cart/<%= item._id %>" class="btn">Add to Cart</a>
+            <a href="/edit/<%= item._id %>" class="btn">Edit</a>
+            <a href="/delete/<%= item._id %>" class="btn">Delete</a>
+        </div>
+      <% }); %>
+  
+    </div>
+  
+  </section>
+  
+
+<!-- end -->
+
+<!-- Contact US -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">Contact Us</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/contact.png" alt="">
+        </div>
+
+        <form action="/contact" method="post">
+            <h3>Get in touch</h3>
+
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input name="name" type="text" placeholder="Name">
+            </div>
+
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input name="email" type="email" placeholder="Email">
+            </div>
+
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input name="phone" type="number" placeholder="Phone">
+            </div>
+
+            <div class="inputBox">
+                <span class="fas fa-comment"></span>
+                <textarea name="comment" placeholder="Write something" style="border: none; padding: 10px;width: 100%; height: 100%; background-color: transparent; color: white;"></textarea>
+            </div>
+            
+            
+            <div>
+            <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+
+    </div>
+
+</section>
+
+
+  <!-- End -->
+
+  <!-- Footer
+
+  <section class="footer">
+
+      <div class="box-container">
+
+          <div class="box">
+              <img src="images/footer-1.png" alt="">
+              <h3>address</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quia aliquid velit quis et adipisci, doloremque officia</p>
+  
+          </div>
+  
+          <div class="box">
+              <img src="images/footer-2.png" alt="">
+              <h3>E-mail</h3>
+              <a href="#" class="link">roha@gmail.com</a>
+
+          </div>
+  
+          <div class="box">
+              <img src="images/footer-3.png" alt="">
+              <h3>Call us</h3>
+              <p>+62 1234 2541</p>
+          </div>
+  
+          <div class="box">
+              <img src="images/footer-4.png" alt="">
+              <h3>Opening hours</h3>
+              <p>Monday - Friday: 8:00 - 24:00
+                 <br> Saturday: 8:00 - 23:00</p>
+          </div>
+
+      </div>
+
+      <div class="credit">created by <span>ROHA AREEJ</span> | all rights reserved! </div>
+
+  </section> -->
+
+
+
+
+
+
+
+
+
+  <!-- Custom JS Link -->

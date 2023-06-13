@@ -1,0 +1,26 @@
+<section class="contact" id="contact">
+
+    <h1 class="heading">Edit Menu</h1>
+
+    <div class="row">
+
+        <form action="/edit/<%= menu._id %>" method="post">
+
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input name="name" type="text" placeholder="name" value="<%= menu.name %>">
+            </div>
+
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input name="price" type="number" placeholder="Enter price" value="<%= menu.price %>">
+            </div>
+
+            <!-- <input type="submit" value="Edit" class="btn"> -->
+            <button type="submit" class="btn">Edit </button>
+
+        </form>
+
+    </div>
+
+</section>
