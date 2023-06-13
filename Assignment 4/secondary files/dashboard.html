@@ -1,0 +1,47 @@
+<div class="container">
+    <h1 class="mt-5 text-center">AVAILABLE GAMES</h1>
+    <div class="row">
+      <% games.forEach(function(game) { %>
+      <div class="col-md-4 mt-4">
+        <div class="card" data-game-id="<%= game._id %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= game.name %></h5>
+            <p class="card-text">Price: <%= game.price %></p>
+            <form id="deleteForm_<%= game._id %>" class="delete-form">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="button" class="btn btn-danger delete-btn">Delete</button>
+            </form>
+            <button type="button" class="btn btn-primary edit-btn">Edit</button>
+            <div class="edit-form d-none">
+              <div class="form-group">
+                <label for="editName">Name:</label>
+                <input type="text" class="form-control" id="editName" value="<%= game.name %>">
+              </div>
+              <div class="form-group">
+                <label for="editPrice">Price:</label>
+                <input type="text" class="form-control" id="editPrice" value="<%= game.price %>">
+              </div>
+              <button type="button" class="btn btn-primary save-btn">Save</button>
+              <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <div class="mt-4">
+      <button type="button" class="btn btn-success" id="addGameBtn">Add Game</button>
+      <form action="/games" method="POST" class="add-game-form d-none mt-4">
+        <div class="form-group">
+          <label for="gameName">Name:</label>
+          <input type="text" class="form-control" id="gameName" name="name">
+        </div>
+        <div class="form-group">
+          <label for="gamePrice">Price:</label>
+          <input type="text" class="form-control" id="gamePrice" name="price">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="/javascripts/client.js"></script>

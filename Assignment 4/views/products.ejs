@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Form - MongoDB</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style1.css">
+    <!--<script src="signup.js"></script>-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 main">
+                <h2>Product List</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Attraction</th>
+                            <th>Locality</th>
+                            
+                            <th>Actions</th> <!-- New column for actions -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <% users.forEach(function(user) { %>
+                      <tr>
+                        <td><%= user.name %></td>
+                        
+                        <td><%= user.category %></td>
+                        <td><%= user.color %></td>
+                        <td>
+                          <form method="POST" action="/delete">
+                            <input type="hidden" name="name" value="<%= user.name %>">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                          </form>
+                          <button type="button" class="btn btn-primary" onclick="openUpdateForm('<%= user.name %>')">Update</button>
+                          
+                          <!-- Update Form -->
+                          <div class="update-form" id="updateForm-<%= user.name %>" style="display: none;">
+                            <form method="POST" action="/update">
+                              <input type="hidden" name="name" value="<%= user.name %>">
+                              <input type="text" name="Locality" placeholder="New Quantity" required>
+          
+                              <input type="text" name="Attraction" placeholder="New Color" required>
+                              <button type="submit" class="btn btn-primary">Update</button>
+                              <button type="button" class="btn btn-secondary" onclick="closeUpdateForm('<%= user.name %>')">Cancel</button>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                      <% }); %>
+                    </tbody>
+                    
+                </table>
+                <br>
+                <form action="/products" method="POST">
+                    <h2>Add Area Form</h2>
+                    <input type="text" class="box" id="name" name="name" placeholder="Name" required />
+                    <br>
+                   
+                    <input type="text" class="box" id="category" name="Attraction" placeholder=" Attraction" required />
+                    <br>
+                    <input type="text" class="box" id="color" name="Locality" placeholder="Locality" required />
+                    <br>
+                    <input type="submit" value="Add Area" id="submit" alt="submit" />
+                </form>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-nlzn6+P/ZmB7NuXQrya/Jk7JHq5rIHjXk2y3rRd79Zf2DQepl8c2Q/g3J5xc4Xvr" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+      function openUpdateForm(name) {
+        $('#updateForm-' + name).show();
+      }
+
+      function closeUpdateForm(name) {
+        $('#updateForm-' + name).hide();
+      }
+    </script>
+</body>
+
+</html>

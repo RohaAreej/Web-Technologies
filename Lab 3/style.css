@@ -1,0 +1,153 @@
+.home-main{
+    background: url("home-img.jpeg");
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.main-content{
+    color:rgb(244, 246, 248);
+    position: absolute;
+    top:50%;
+    left:25%;
+    transform: translate(-50%,-50%);
+}
+
+.main-content h1{
+
+font-size: 3rem;
+
+}
+
+.main-content p{
+    font-size: 1.2rem;
+    margin: .5rem 0;
+}
+
+.gradient-btn{
+    width:200px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: beige;
+    background-image: linear-gradient(to right, #4ece7f 0%,#19818f 50%, #0d8059 100%  );
+    border-radius: 10px;
+    background-size: 200% auto;
+    transition: .3s ease-in-out;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+
+.main-content .gradient-btn{
+    width:200px;
+    height: 45px;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+
+}
+
+.gradient-btn :hover{
+
+    background-position: right center;
+}
+
+.about{
+    padding: 1rem;
+    text-align: center;
+}
+
+.about > h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.about-sub{
+    display: flex;
+    width: 800px;
+    margin: 1rem auto;
+    align-items: left;
+}
+.about-sub >img{
+    max-height: 250px;
+    max-width: 90%;
+    width: 300px;
+    animation: animateimage 1s linear;
+
+}
+
+@keyframes animateimage {
+    
+    from{
+        transform:translateY(-15px);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about-sub .gradient-btn{
+    width: 100px;
+    font-size: 0.8rem;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.about-sub .about-sub-sub{
+    padding: 1rem;
+}
+
+.about-sub .about-sub-sub p{
+font-size: 14px;
+}
+
+.about-companies{
+    max-width: 800px;
+    width:90%;
+    background-color: aliceblue;
+    padding: 1rem .5rem;
+    margin: 1rem auto;
+}
+
+.about-companies h1{
+
+    font-size: 1.5rem;
+    color:#444;
+
+}
+ 
+
+.about-companies .company-logos{
+    display: flex;
+    color:#666;
+    font-size: 2rem;
+    justify-content: space-evenly;
+    transition: .3s ease-in;
+    max-width: 75%;
+    margin: auto;
+}
+.about-companies .company-logos .fa:hover{
+    color:#000;
+}
+
+.subscribe{
+text-align: center;
+padding: 3rem 2rem 2rem 2rem;    
+}
+.subscribe-box{
+    padding:10px
+}
+.subscribe-box input{
+    max-width: 300px;
+    width:65%;
+    padding:5px 10px;
+    height: 80px;
+    
+}
+
+.subscribe-box .Mybtn{
+    border:none;
+    background-color: #4162cf;
+}
+
